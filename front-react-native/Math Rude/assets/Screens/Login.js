@@ -16,6 +16,7 @@ export default class Login extends React.Component {
     return(
       <View  style={styles.container2}>
          <ImageBackground source={tittle} style={{width: 350, height: 120}}></ImageBackground>
+        
             <View style = {styles.container}>
               <Text style={styles.welcome}></Text>
                <TextInput
@@ -49,7 +50,7 @@ export default class Login extends React.Component {
               alignItems: 'center',
               backgroundColor:'white'
             },
-
+            
             image: {
               padding: 120,
               flex: 1,
@@ -77,6 +78,12 @@ export default class Login extends React.Component {
               backgroundColor: 'white',
               borderRadius:4000,
               width:160
+            },
+            welcome:{
+              padding:10,
+              fontSize:30,
+              textAlign:'center',
+              color:'white'
             },
           
           });
