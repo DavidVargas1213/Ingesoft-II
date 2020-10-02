@@ -1,16 +1,18 @@
 import React,{ Component }  from 'react';
-import {Text, 
-        View,
-    } from 'react-native';
-
+import {ImageBackground, 
+  StyleSheet,
+  Text,View, 
+  TextInput,
+  Button } from 'react-native';
+    
 export default class Likes extends React.Component{
-    render(){
-        return(
-            <View>
-                <Text>
-                    Apps
-                </Text>
-            </View>
-        );
-    }
+  render(){
+      return(
+          <View>
+              <Text>
+                  Apps
+              </Text>
+          </View>
+      );
+  }
 }
