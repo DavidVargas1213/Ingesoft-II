@@ -1,18 +1,10 @@
 import React, {Component} from 'react';
-//import {createStackNavigator} from 'react-navigation-stack';
-//import { createAppContainer } from 'react-navigation';
+
 import {ImageBackground, 
         StyleSheet,
-        Text,View, 
-        TextInput,
-        Button } from 'react-native';
-
-//import Login from '../Screens/Login';
-
-const tittle = { uri: "https://1.bp.blogspot.com/-WbpBT4Jma3k/X2OzJNl6PdI/AAAAAAAAQ6E/mxNRjJ7q9UAvkvJAnzE4y-Zpt0E6X718wCLcBGAsYHQ/s588/tiitle.PNG" };
-const image1 = { uri: " https://lh3.googleusercontent.com/-co3ApGDZi7Q/X5G_EmqsRkI/AAAAAAAARBA/M1gldNnzJMgKk_GoEZJWTlR9JNxMQMfewCLcBGAsYHQ/img3.jpeg"};
-const image2 = { uri: "https://1.bp.blogspot.com/-FZ7j1TWsKrg/X2OeEPpAA8I/AAAAAAAAQ5U/7pd50wC5_QY_d6L7cLtAAZBrBoUfa7ySACLcBGAsYHQ/s793/img2.jpeg" };
-const image3 = { uri: "https://lh3.googleusercontent.com/-VxPtzmWyLyc/X3Ya0CVGroI/AAAAAAAAQ7I/9K1ZRylF68sVfXWNptecjbd0l4V11uNeQCLcBGAsYHQ/WhatsApp%2BImage%2B2020-09-24%2Bat%2B3.27.25%2BPM%2B%25282%2529.jpeg" };
+        View, 
+        Button } 
+      from 'react-native';
 
 export default class Home extends React.Component {
     render(){
@@ -21,7 +13,7 @@ export default class Home extends React.Component {
         <View  style={styles.container}>
         
               <View style = {styles.containerAprendo}>
-              <ImageBackground source={image1} style={{width: 350, height: 200, }}></ImageBackground>
+              <ImageBackground source={require('../imagenes/AprendoHome.jpeg')} style={{width: 350, height: 200, }}></ImageBackground>
                 <Button
                   color="#590871"
                   large
@@ -30,7 +22,7 @@ export default class Home extends React.Component {
                   />
                </View>
                <View style = {styles.containerCompito}>
-               <ImageBackground source={image2} style={{width: 350, height: 200}}></ImageBackground>
+               <ImageBackground source={require('../imagenes/CompitoHome.jpeg')} style={{width: 350, height: 200}}></ImageBackground>
                 <Button
                   color="#590871"
                   large
@@ -39,7 +31,7 @@ export default class Home extends React.Component {
                   />
                </View>
                <View style = {styles.containerRepaso}>
-               <ImageBackground source={image3} style={{width: 350, height: 200}}></ImageBackground>
+               <ImageBackground source={require('../imagenes/RepasoHome.jpeg')} style={{width: 350, height: 200}}></ImageBackground>
                 <Button
                   
                   color="#590871"

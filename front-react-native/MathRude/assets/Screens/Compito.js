@@ -8,14 +8,12 @@ import {ImageBackground,
       
       } from 'react-native';
 
-const tittle = {uri:"https://lh3.googleusercontent.com/-9xN30ROWJ4Q/X5HBCKN6TJI/AAAAAAAARBM/h5CSNy-x0uUozBpHnnq7SkEyR6zuUiQ7QCLcBGAsYHQ/tituloCompito.PNG" };
-const down = {uri: 'https://lh3.googleusercontent.com/-8PdGGjI08lU/X5HER3X_-iI/AAAAAAAARBY/GlMDCHjW_TMuv6eFAD3CpsHAOU0YHlISwCLcBGAsYHQ/Down.PNG'};
 export default class Compito extends React.Component {
     render(){
       const{navigate}=this.props.navigation;
       return(
         <View  style={styles.container}>
-        <ImageBackground source={tittle} style={styles.image}></ImageBackground>
+        <ImageBackground source={require('../imagenes/tituloCompito.PNG')} style={styles.image}></ImageBackground>
         <View style={styles.containerBottoms}>
          
           <View>
@@ -53,7 +51,7 @@ export default class Compito extends React.Component {
             </TouchableOpacity>
         </View> 
         </View>
-               <ImageBackground source={down} style={styles.image2}></ImageBackground>
+               <ImageBackground source={require('../imagenes/BajaCompito.PNG')} style={styles.image2}></ImageBackground>
                
         </View>
       );

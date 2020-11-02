@@ -9,14 +9,13 @@ from 'react-native';
 
 
 const font = { uri: "https://1.bp.blogspot.com/-aEvtfSUfFGo/X2O05HZKNqI/AAAAAAAAQ6Y/QD8mxkExPtMYS3aq1-KARLaJcgokH-REACLcBGAsYHQ/s1018/WhatsApp%2BImage%2B2020-09-17%2Bat%2B1.06.54%2BPM.jpeg" };
-const tittle = { uri: "https://1.bp.blogspot.com/-WbpBT4Jma3k/X2OzJNl6PdI/AAAAAAAAQ6E/mxNRjJ7q9UAvkvJAnzE4y-Zpt0E6X718wCLcBGAsYHQ/s588/tiitle.PNG" };
 
 export default class Login extends React.Component {
   render(){
     const{navigate}=this.props.navigation;
     return(
       <View  style={styles.container2}>
-         <ImageBackground source={tittle} style={{width: 350, height: 120}}></ImageBackground>
+         <ImageBackground source= {require('../imagenes/TituloLogin.PNG')} style={{width: 350, height: 120}}></ImageBackground>
         
             <View style = {styles.container}>
               <Text style={styles.welcome}></Text>
@@ -31,9 +30,9 @@ export default class Login extends React.Component {
                         />
                      </View>
                        <View style={styles.container}>
-                         <ImageBackground source={font} style={{width: 350, height: 200}}></ImageBackground>
+                         <ImageBackground source= {require('../imagenes/BajaLogin.jpg')}style={{width: 400, height: 200}}></ImageBackground>
                      </View> 
-                  </View>          
+                  </View>
                 );
             }
 }        
