@@ -1,0 +1,12 @@
+{
+  "name": "Math_Rude",
+  "displayName": "Math_Rude",
+  "expo": {
+    "name": "Math_Rude",
+    "slug": "Math_Rude",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
