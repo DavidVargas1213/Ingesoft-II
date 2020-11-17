@@ -13,12 +13,16 @@ import JuegoSuma from './assets/Screens/Juegos/JuegoSuma';
 import JuegoResta from './assets/Screens/Juegos/JuegoResta';
 import JuegoMultiplicacion from './assets/Screens/Juegos/JuegoMultiplicacion';
 import JuegoDivision from './assets/Screens/Juegos/JuegoDivision';
+import Aprendo from './assets/Screens/Aprendo';
+import AprendoSuma from './assets/Screens/Aprendo/AprendoSuma';
 
 const Stack = createStackNavigator();
 
-function MyStack() {
+
+export default function App() {
   return (
-    <Stack.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator>
       <Stack.Screen name='Login' component={Login} />
       <Stack.Screen name='Home' component={Home} /> 
       <Stack.Screen name='Repaso' component={Repaso} />
@@ -31,14 +35,10 @@ function MyStack() {
       <Stack.Screen name='JuegoResta' component={JuegoResta} />
       <Stack.Screen name='JuegoMultiplicacion' component={JuegoMultiplicacion} />
       <Stack.Screen name='JuegoDivision' component={JuegoDivision} />
+      <Stack.Screen name='Aprendo' component={Aprendo} />
+      <Stack.Screen name='AprendoSuma' component={AprendoSuma} />
       
     </Stack.Navigator>
-  );  
-}
-export default function App() {
-  return (
-    <NavigationContainer>
-      <MyStack />
     </NavigationContainer>
   );
 }

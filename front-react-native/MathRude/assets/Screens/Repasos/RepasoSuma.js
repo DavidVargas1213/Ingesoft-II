@@ -9,9 +9,9 @@ export default class RepasoSuma extends React.Component{
     render(){
         return(
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/titulo sumar.PNG')} style={{width: 350, height: 210}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/titulosumar.png')} style={{width: 350, height: 210}}></ImageBackground>
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/SumasRepaso.PNG')} style={{width: 350, height: 500}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/sumasrepaso.png')} style={{width: 350, height: 500}}></ImageBackground>
              </View>
         </View>
         );

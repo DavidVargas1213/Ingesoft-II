@@ -143,14 +143,14 @@ const styles = StyleSheet.create({
       fontSize: 60,
       fontWeight: "bold",
       color: 'white',
-      paddingBottom: '10'
+      paddingBottom: 10
     },
     textTittle:{
       fontFamily : 'Roboto',
       fontSize: 40,
       fontWeight: "bold",
       color: 'white',
-      paddingBottom: '10',
+      paddingBottom: 10,
       alignItems:'center'
     },
     bottom1:{
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
       fontSize: 50,
       fontWeight: "bold",
       color: 'white',
-      paddingBottom: '10'
+      paddingBottom: 10
     },
     bottom2:{
       fontFamily : 'Cochin',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
       fontSize: 50,
       fontWeight: "bold",
       color: 'white',
-      paddingBottom: '10'
+      paddingBottom: 10
     },
     bottom3:{
       fontFamily : 'Cochin',
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
       fontSize: 50,
       fontWeight: "bold",
       color: 'white',
-      paddingBottom: '10'
+      paddingBottom: 10
     },
     containerBottoms:{
       flexDirection: 'row', 

@@ -13,7 +13,7 @@ export default class Login extends React.Component {
     const{navigate}=this.props.navigation;
     return(
       <View  style={styles.container2}>
-         <ImageBackground source= {require('../imagenes/TituloLogin.PNG')} style={{width: 350, height: 120}}></ImageBackground>
+         <ImageBackground source= {require('../imagenes/titulologin.png')} style={{width: 350, height: 120}}></ImageBackground>
         
             <View style = {styles.container}>
               <Text style={styles.welcome}></Text>
@@ -28,7 +28,7 @@ export default class Login extends React.Component {
                         />
                      </View>
                        <View style={styles.container}>
-                         <ImageBackground source= {require('../imagenes/BajaLogin.jpg')}style={{width: 400, height: 200}}></ImageBackground>
+                         <ImageBackground source= {require('../imagenes/bajalogin.jpg')}style={{width: 400, height: 200}}></ImageBackground>
                      </View> 
                   </View>
                 );

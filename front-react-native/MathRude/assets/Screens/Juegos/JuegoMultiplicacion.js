@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import Draggable from 'react-native-draggable';
-import {
-  TextInput,
-  StyleSheet,
-  ImageBackground,
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Image
-} from 'react-native';
-
+import { TextInput, StyleSheet, ImageBackground, View, Text, TouchableOpacity, ScrollView, Image } from 'react-native';
 
 const App = ( props ) => {
 
-  const [ problem , setProblem ] = useState( null )
   const [ operations , setOperations ] = useState([])
 
-  useEffect(()=>{
-	create()
-  },[])
+	useEffect( () => {
+		create()
+	} , [] )
 
-  const create = ()=>{
-	const num_operations = 5
-    const ops = []
+  	const create = () => {
+	
+		const num_operations = 5
+		const ops = []
     
     for( let i= 0; i<=num_operations; i++ ) {
 
@@ -94,7 +83,7 @@ const App = ( props ) => {
           Coloca los resultados en la operacion
         </Text>
       </View>
-	  <ImageBackground source={require ('../../imagenes/fondoJuegoMulti.png')} 
+	  <ImageBackground source={require ('../../imagenes/fondojuegomulti.png')} 
 	  style={styles.image}>
 
 
@@ -112,12 +101,13 @@ const App = ( props ) => {
             </View>
             <View style={{width : '50%'}}>
             <TextInput
-			value={item.response}
-      onChangeText={ (text)=>updateInput(text, key) }
-      
-			placeholder='Escribe el resultado aqui'
-            key={{key}}
-                style={setInputStyle(item)} />
+              key={{key}}
+			        value={item.response}
+              onChangeText={ (text)=>updateInput(text, key) }
+			        placeholder='Escribe el resultado aqui'
+              style={setInputStyle(item)} 
+              keyboardType={'numeric'}
+            />
             </View>
 		  </View>
 		  )

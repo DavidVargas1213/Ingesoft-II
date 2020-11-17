@@ -11,17 +11,19 @@ import {ImageBackground,
 
 //import Login from './assets/Screens/Login';
 
-const tittle = {uri:"https://lh3.googleusercontent.com/-6LUHcolXwj0/X3Y2vHivpZI/AAAAAAAAQ7w/jCObLBNQWc4QRQZ4S0wNpkipRlOQ8RdLQCLcBGAsYHQ/Titulo%2BRepaso.PNG" };
-const down = {uri: 'https://lh3.googleusercontent.com/-WpeUpVfQky0/X5HlQCJJWdI/AAAAAAAARBk/xOpyDL9p72817XCiJ7vb_DCQAt8QZJ4KACLcBGAsYHQ/Baja%2Brepaso.jpeg'};
+// const tittle = {uri:"https://lh3.googleusercontent.com/-6LUHcolXwj0/X3Y2vHivpZI/AAAAAAAAQ7w/jCObLBNQWc4QRQZ4S0wNpkipRlOQ8RdLQCLcBGAsYHQ/Titulo%2BRepaso.PNG" };
+// const down = {uri: 'https://lh3.googleusercontent.com/-WpeUpVfQky0/X5HlQCJJWdI/AAAAAAAARBk/xOpyDL9p72817XCiJ7vb_DCQAt8QZJ4KACLcBGAsYHQ/Baja%2Brepaso.jpeg'};
 
 export default class Repaso extends React.Component {
     render(){
       const{navigate}=this.props.navigation;
       return(
         <View  style={styles.container}>
-        <ImageBackground source={require('../imagenes/TituloRepaso.PNG')} style={{width: 350, height: 200, }}></ImageBackground>
+        <ImageBackground 
+          source={require('../imagenes/titulorepaso.png')} 
+          style={{ width: 350, height: 200, }}></ImageBackground>
+
         <View style={styles.containerBottoms}>
-         
           <View>
            <TouchableOpacity onPress={() => navigate('RepasoSuma')}>
              <Text style = {styles.bottom1}>
@@ -58,7 +60,7 @@ export default class Repaso extends React.Component {
         </View> 
         </View>
                 
-               <ImageBackground source={require('../imagenes/BajaRepaso.jpeg')} style={styles.image2}></ImageBackground>
+               <ImageBackground source={require('../imagenes/bajarepaso.jpeg')} style={styles.image2}></ImageBackground>
         </View>
       );
     }
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       color: 'orange',
-      paddingBottom: '3',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     bottom2:{
@@ -114,7 +116,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       color: 'orange',
-      paddingBottom: '3',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     bottom4:{
@@ -128,7 +130,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       color: 'orange',
-      paddingBottom: '3',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     containerBottoms:{

@@ -6,7 +6,8 @@ import {
   ImageBackground,
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 
 
@@ -228,18 +229,20 @@ const App = ( props ) => {
   return (
     <View style={{ backgroundColor : 'red', flex : 1 }}>
       <View style={{ justifyContent : 'center', height : 50, alignItems : 'center', backgroundColor : 'green' }}>
+      
         <Text style={{color : 'yellow', fontSize : 20, fontWeight : 'bold'}}>
           Coloca los resultados en la operacion
         </Text>
         <Text style={{color : 'yellow', fontSize : 20, fontWeight : 'bold'}}>
           {oportunities} Turnos restantes
         </Text>
+        
       </View>
       <ImageBackground source={{uri : 'https://www.3dmodels-textures.com/image/cache/assets/3DModels-Textures/2D%20Cartoon%20Trees703/image/tree%209-600x450.jpg'}} style={styles.image}>
 
       {
-      operations.map((item, key) => {
-        return      <Draggable 
+        operations.map((item, key) => {
+        return     <Draggable 
         key={`oi${key}`}
         x={ item.x }
         y={ item.y }
@@ -303,7 +306,7 @@ const App = ( props ) => {
                       })
                     }
                     
-
+                    
                   }}
 
                   x={item.x} 
@@ -322,8 +325,8 @@ const App = ( props ) => {
                 resizeMode: "center",
                 justifyContent: "center",
               }} 
-                style={{ width : 150, height : 140,  justifyContent : 'center', alignItems : 'center', padding : 30}}>
-              <Text style={{ fontSize: 16, fontWeight :'bold' }}> ({ item.result }) </Text>
+              style={{ width : 150, height : 140,  justifyContent : 'center', alignItems : 'center', padding : 30}}>
+              <Text style={{ fontSize: 40, fontWeight :'bold', color : 'yellow' }}> { item.result }</Text>
             </ImageBackground>
           </Draggable>
       })
@@ -340,7 +343,7 @@ const App = ( props ) => {
           bottom : 100, 
           right : 0,
           width : '100%'
-          }}>
+        }}>
           <TouchableOpacity 
           onPress={()=>resetValues()}
           style={{width : 200, height : 100, backgroundColor : 'green', borderRadius : 15, justifyContent : 'center'}}>
@@ -352,14 +355,14 @@ const App = ( props ) => {
 
 
 {
-        ( oportunities === 0 && correcto < 3 ) && <View style={{
-          justifyContent : 'center',
-          alignItems : 'center',
-          position : 'absolute', 
-          bottom : 100, 
-          right : 0,
-          width : '100%'
-          }}>
+  ( oportunities === 0 && correcto < 3 ) && <View style={{
+    justifyContent : 'center',
+    alignItems : 'center',
+    position : 'absolute', 
+    bottom : 100, 
+    right : 0,
+    width : '100%'
+  }}>
           <TouchableOpacity 
           onPress={()=>resetValues()}
           style={{width : 200, height : 100, backgroundColor : 'red', borderRadius : 15, justifyContent : 'center'}}>

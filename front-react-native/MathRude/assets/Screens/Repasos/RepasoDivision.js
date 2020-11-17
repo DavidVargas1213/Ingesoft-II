@@ -9,9 +9,9 @@ export default class RepasoDivision extends React.Component{
     render(){
         return(
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/tituloDivision.PNG')} style={{width: 350, height: 210}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/titulodivision.png')} style={{width: 350, height: 210}}></ImageBackground>
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/RepasoDivision.PNG')} style={{width: 350, height: 420}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/repasodivision.png')} style={{width: 350, height: 420}}></ImageBackground>
              </View>
         </View>
         );

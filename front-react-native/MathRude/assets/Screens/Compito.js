@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {ImageBackground, 
         StyleSheet,
         Text,View, 
-        Button, 
-        large,
         TouchableOpacity
-      
       } from 'react-native';
 
 export default class Compito extends React.Component {
+
     render(){
-      const{navigate}=this.props.navigation;
+      
+      const{ navigate }=this.props.navigation;
+
       return(
         <View  style={styles.container}>
-        <ImageBackground source={require('../imagenes/tituloCompito.PNG')} style={styles.image}></ImageBackground>
+        <ImageBackground source={require('../imagenes/titulocompito.png')} style={styles.image}></ImageBackground>
         <View style={styles.containerBottoms}>
          
           <View>
@@ -43,16 +43,13 @@ export default class Compito extends React.Component {
         </View>
         <View>
             <TouchableOpacity onPress={() => navigate('JuegoDivision')}>
-              <Text style = {styles.bottom4}>
-                
-                DIVISION
-                
+                <Text style = {styles.bottom4}>
+                  DIVISION
                 </Text> 
             </TouchableOpacity>
         </View> 
         </View>
-               <ImageBackground source={require('../imagenes/BajaCompito.PNG')} style={styles.image2}></ImageBackground>
-               
+               <ImageBackground source={require('../imagenes/bajacompito.png')} style={styles.image2}></ImageBackground>
         </View>
       );
     }
@@ -80,9 +77,9 @@ const styles = StyleSheet.create({
     },
     bottom1:{
       fontFamily : 'Cochin',
-      paddingLeft:60,
-      paddingHorizontal:3,
-      paddingVertical:3,
+      paddingLeft: 60,
+      paddingHorizontal: 3,
+      paddingVertical: 3,
       //marginVertical: 20,
       
       borderRadius:10,
@@ -92,11 +89,11 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       color: 'green',
-      paddingBottom: '3',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     bottom2:{
-      fontFamily : 'Cochin',
+    fontFamily : 'Cochin',
       
       paddingLeft:60,
       
@@ -125,7 +122,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       color: 'green',
-      paddingBottom: '3',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     bottom4:{
@@ -139,7 +136,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       color: 'green',
-      paddingBottom: '3',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     containerBottoms:{

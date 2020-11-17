@@ -11,9 +11,9 @@ export default class RepasoResta extends React.Component{
         return(
           
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/tituloRestar.PNG')} style={{width: 350, height: 210}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/titulorestar.png')} style={{width: 350, height: 210}}></ImageBackground>
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/RestasRepaso.PNG')} style={{width: 350, height: 500}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/restasrepaso.png')} style={{width: 350, height: 500}}></ImageBackground>
              </View>
         </View>
         );

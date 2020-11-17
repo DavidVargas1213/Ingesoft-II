@@ -70,8 +70,10 @@ const App = () => {
 
   const onFullScreen = () => {
     setIsFullScreen(isFullScreen);
-    if (screenType == 'content') setScreenType('cover');
-    else setScreenType('content');
+    if (screenType == 'content') 
+      setScreenType('cover');
+    else
+      setScreenType('content');
   };
 
   const renderToolbar = () => (
@@ -91,7 +93,7 @@ const App = () => {
         onProgress={onProgress}
         paused={paused}
         ref={videoPlayer}
-        resizeMode={ screenType }
+        resizeMode={ 'stretch' }
         onFullScreen={isFullScreen}
         source={require('../../videos/Suma.mp4')}
 
@@ -133,7 +135,8 @@ const styles = StyleSheet.create({
     left: 0,
     bottom: 0,
     right: 0,
-    backgroundColor: 'black',
+    backgroundColor: 'red',
     justifyContent: 'center',
+    width : '100%'
   },
 });

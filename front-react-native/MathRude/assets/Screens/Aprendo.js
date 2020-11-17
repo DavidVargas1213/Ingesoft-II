@@ -9,16 +9,23 @@ import {ImageBackground,
       
       } from 'react-native';
 
+//import Login from './assets/Screens/Login';
+
+// const tittle = {uri:"https://lh3.googleusercontent.com/-6LUHcolXwj0/X3Y2vHivpZI/AAAAAAAAQ7w/jCObLBNQWc4QRQZ4S0wNpkipRlOQ8RdLQCLcBGAsYHQ/Titulo%2BRepaso.PNG" };
+// const down = {uri: 'https://lh3.googleusercontent.com/-WpeUpVfQky0/X5HlQCJJWdI/AAAAAAAARBk/xOpyDL9p72817XCiJ7vb_DCQAt8QZJ4KACLcBGAsYHQ/Baja%2Brepaso.jpeg'};
+
 export default class Repaso extends React.Component {
     render(){
       const{navigate}=this.props.navigation;
       return(
         <View  style={styles.container}>
-        <ImageBackground source={require('../imagenes/Titulo Aprendo.PNG')} style={{width: 350, height: 200, }}></ImageBackground>
+        <ImageBackground 
+          source={require('../imagenes/tituloaprendo.png')} 
+          style={{ width: 350, height: 250, }}></ImageBackground>
+
         <View style={styles.containerBottoms}>
-         
           <View>
-           <TouchableOpacity onPress={() => navigate('RepasoSuma')}>
+           <TouchableOpacity onPress={() => navigate('AprendoSuma')}>
              <Text style = {styles.bottom1}>
                  SUMA         
                </Text> 
@@ -53,7 +60,7 @@ export default class Repaso extends React.Component {
         </View> 
         </View>
                 
-               <ImageBackground source={require('../imagenes/BajaRepaso.jpeg')} style={styles.image2}></ImageBackground>
+               <ImageBackground source={require('../imagenes/bajarepaso.jpeg')} style={styles.image2}></ImageBackground>
         </View>
       );
     }
@@ -76,11 +83,11 @@ const styles = StyleSheet.create({
       marginBottom:10,
       borderRadius:10,
       borderWidth: 5,
-      borderColor: 'orange',
+      borderColor: '#ADD8E6',
       fontSize: 20,
       fontWeight: "bold",
-      color: 'orange',
-      paddingBottom: '3',
+      color: '#ADD8E6',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     bottom2:{
@@ -89,10 +96,10 @@ const styles = StyleSheet.create({
       marginBottom:10,
       borderRadius:10,
       borderWidth: 5,
-      borderColor: 'orange',
+      borderColor: '#ADD8E6',
       fontSize: 20,
       fontWeight: "bold",
-      color: 'orange',
+      color: '#ADD8E6',
       justifyContent:'center',
       alignItems: 'center',
       backgroundColor: 'black'
@@ -105,11 +112,11 @@ const styles = StyleSheet.create({
       marginBottom:10,
       borderRadius:10,
       borderWidth: 5,
-      borderColor: 'orange',
+      borderColor: '#ADD8E6',
       fontSize: 20,
       fontWeight: "bold",
-      color: 'orange',
-      paddingBottom: '3',
+      color: '#ADD8E6',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     bottom4:{
@@ -119,11 +126,11 @@ const styles = StyleSheet.create({
       paddingVertical:3,
       borderRadius:10,
       borderWidth: 5,
-      borderColor: 'orange',
+      borderColor: '#ADD8E6',
       fontSize: 20,
       fontWeight: "bold",
-      color: 'orange',
-      paddingBottom: '3',
+      color: '#ADD8E6',
+      paddingBottom: 3,
       backgroundColor: 'black'
     },
     containerBottoms:{

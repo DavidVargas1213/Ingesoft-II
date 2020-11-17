@@ -9,9 +9,9 @@ export default class RepasoMultiplicacion extends React.Component{
     render(){
         return(
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/tituloMultiplicacion.PNG')} style={{width: 350, height: 205}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/titulomultiplicacion.png')} style={{width: 350, height: 205}}></ImageBackground>
              <View style={styles.container}>
-                <ImageBackground source={require('../../imagenes/RepasoMultiplicar.PNG')} style={{width: 350, height: 500}}></ImageBackground>
+                <ImageBackground source={require('../../imagenes/repasomultiplicar.png')} style={{width: 350, height: 500}}></ImageBackground>
              </View>
         </View>
         );
