@@ -15,6 +15,9 @@ import JuegoMultiplicacion from './assets/Screens/Juegos/JuegoMultiplicacion';
 import JuegoDivision from './assets/Screens/Juegos/JuegoDivision';
 import Aprendo from './assets/Screens/Aprendo';
 import AprendoSuma from './assets/Screens/Aprendo/AprendoSuma';
+import AprendoResta from './assets/Screens/Aprendo/AprendoResta';
+import AprendoMultiplicacion from './assets/Screens/Aprendo/AprendoMultiplicacion';
+import AprendoDivision from './assets/Screens/Aprendo/AprendoDivision';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +40,9 @@ export default function App() {
       <Stack.Screen name='JuegoDivision' component={JuegoDivision} />
       <Stack.Screen name='Aprendo' component={Aprendo} />
       <Stack.Screen name='AprendoSuma' component={AprendoSuma} />
+      <Stack.Screen name='AprendoResta' component={AprendoResta} />
+      <Stack.Screen name='AprendoMultiplicacion' component={AprendoMultiplicacion} />
+      <Stack.Screen name='AprendoDivision' component={AprendoDivision} />
       
     </Stack.Navigator>
     </NavigationContainer>

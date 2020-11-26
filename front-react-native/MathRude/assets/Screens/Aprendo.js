@@ -32,7 +32,7 @@ export default class Repaso extends React.Component {
         </TouchableOpacity>
           </View> 
         <View>
-            <TouchableOpacity onPress={() => navigate('RepasoResta')}>
+            <TouchableOpacity onPress={() => navigate('AprendoResta')}>
               <Text style = {styles.bottom2}>
                  
                  RESTA
@@ -41,7 +41,7 @@ export default class Repaso extends React.Component {
             </TouchableOpacity>
         </View> 
         <View>
-            <TouchableOpacity onPress={() => navigate('RepasoMultiplicacion')}>
+            <TouchableOpacity onPress={() => navigate('AprendoMultiplicacion')}>
               <Text style = {styles.bottom3}>
                 
                 MULTIPLICACION
@@ -50,7 +50,7 @@ export default class Repaso extends React.Component {
             </TouchableOpacity>
         </View>
         <View>
-            <TouchableOpacity onPress={() => navigate('RepasoDivision')}>
+            <TouchableOpacity onPress={() => navigate('AprendoDivision')}>
               <Text style = {styles.bottom4}>
                 
                 DIVISION

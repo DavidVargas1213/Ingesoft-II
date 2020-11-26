@@ -1,121 +1,111 @@
-import React, {Component} from 'react';
-import {ImageBackground, 
-        StyleSheet,
-        Text,
+import React, { useEffect, useState } from 'react';
+import { 
+        StyleSheet, 
+        Text, 
         View, 
-        TouchableOpacity,
+        TouchableOpacity
       } 
 from 'react-native';
 
-
-
-function genNumAleatorio() {
+const genNumAleatorio = () => {
   var numero_aleatorio = Math.random();
-  numero_aleatorio = Math.floor(numero_aleatorio * 99 );
+  numero_aleatorio = Math.floor(numero_aleatorio * 10 );
   return numero_aleatorio;
 }
 
-    export default class Login extends React.Component {
-      constructor(props){
-        super(props);
-        
-        var a=genNumAleatorio();
-        var b=genNumAleatorio();
-        while(a<b){
-          a = genNumAleatorio();
-        }
-        const c=genNumAleatorio();
-        const d=genNumAleatorio();
-        const Resultado= a-b;
-        this.state={
-          visibility: false,
-          numeroAleatorio1 : a,
-          numeroAleatorio2 : b,
-          numeroAleatorio3 : c,
-          numeroAleatorio4 : d,
-          Numeros : [Resultado, c, d],
+  const Index = (props) => {
+
+      const [ buenas , setBuenas ] = useState(0)
+      const [ malas , setMalas ] = useState(0)
+      const [ operation , setOperation ] = useState({
+        result : {
+          a : 0,
+          b : 0,
+          c : 0,
+        },
+        randomNumbers : []
+      })
+
+    const getNumeros =  () => {
+
+      const a = genNumAleatorio()
+      const b = genNumAleatorio()
+      const c = a - b
+      
+      let randomNumbers = [ genNumAleatorio(), genNumAleatorio(), c ]
+
+      function shuffle(o){ 
+        for( var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x );
+        return o;
+      };
+    
+      randomNumbers = [ ...shuffle( randomNumbers ) ]
+      setOperation({ result : { a,b,c }, randomNumbers  })
+
+  }
+  const  evaluateResult = ( response ) => {
+
+    if( response === operation.result.c ){
+      setBuenas(buenas + 1)
+      getNumeros()
+      return
+    }
+
+    console.log('no')
+    setMalas( malas + 1 )
+    getNumeros()
+
+  }
+
+  useEffect(()=>{
+    getNumeros()
+  },[])
          
-        }
-        this.state.Numeros.sort(function (a,b ){return a-b});
-      }
-     
-  render(){
-    const { Numeros} = this.state;
     return(   
       <View style={styles.container}>
         <View style={styles.containerTittle}>
         
+                <View style={{flexDirection : 'row', backgroundColor : 'black', width : 100,height : 100, margin : 10, borderRadius : 15, width : '100%' }}>
+                    <TouchableOpacity style={{ justifyContent : 'center', alignItems :'center', flex : 1 }}>
+                      <Text style={{color : 'white', fontSize : 15}}>BUENAS</Text> 
+                      <Text style={{color : 'white', fontSize : 35}}>{buenas}</Text> 
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{ justifyContent : 'center', alignItems :'center', flex : 1 }}>
+                    <Text style={{color : 'white', fontSize : 15}}>MALAS</Text> 
+                      <Text style={{color : 'white', fontSize : 35}}>{malas}</Text> 
+                    </TouchableOpacity>
+                  </View>
           <Text style={styles.textTittle}>
             CUAL ES
             </Text>
             <Text style={styles.textTittle}>
             EL RESULTADO?
             </Text>
-          
+
         </View>
         <Text style = {styles.text}>
-          {this.state.numeroAleatorio1} - {this.state.numeroAleatorio2} = ?
+          {operation.result.a} - {operation.result.b} = ?
            
         </Text>
-        <View style={styles.containerBottoms}>
+        <View style={{flexDirection : 'row'}}>
          
-          <View>
-           <TouchableOpacity onPress={ c => {
-              if(this.state.numeroAleatorio1-this.state.numeroAleatorio2==Numeros[0]){
-                
-               console.log ("OKKKKKK"); 
-              }else{
-                console.log ("NO")
-            }
-          
-          }
-              }>
-             <Text style = {styles.bottom1}>
-                 { 
-                 Numeros[0]
-                 }          
-               </Text> 
-        </TouchableOpacity>
-          </View> 
-        <View>
-            <TouchableOpacity onPress={c => {
-              if(this.state.numeroAleatorio1-this.state.numeroAleatorio2==Numeros[1]){
-                //<ImageBackground source={tick} style={styles.containerTittle}></ImageBackground>
-               console.log ("OKKKKKK"); 
-              }else{
-                console.log ("NO")
-            }
-          }}>
-              <Text style = {styles.bottom2}>
-                 {
-                 Numeros[1]
-                 }
-                </Text> 
-            </TouchableOpacity>
-        </View> 
-        <View>
-            <TouchableOpacity onPress={c => {
-              if(this.state.numeroAleatorio1-this.state.numeroAleatorio2==Numeros[2]){
-                
-               console.log ("OKKKKKK"); 
-              }else{
-                console.log ("NO")
-            }
-          }}>
-              <Text style = {styles.bottom3}>
-                {
-                Numeros[2]
-                }
-                </Text> 
-            </TouchableOpacity>
-        </View> 
+       {operation.randomNumbers.map((item, key)=>{
+
+         return (<View key={`item_key_${key}`} style={{backgroundColor : 'black', width : 100,height : 100, margin : 10, borderRadius : 15}}>  
+                  <TouchableOpacity 
+                  style={{justifyContent : 'center', alignItems :'center', flex : 1}}
+                  onPress={() => evaluateResult( item ) }>
+                    <Text style={{color : 'white', fontSize : 35}}>{item}</Text> 
+                  </TouchableOpacity>
+                </View> )
+       })}
         </View>
       </View>
       );
     }
-  }
   
-  //<ImageBackground source={down} style={styles.image2}></ImageBackground>
+export default Index
+
 const styles = StyleSheet.create({
   
   containerTick: {
@@ -202,4 +192,3 @@ const styles = StyleSheet.create({
       marginRight: '50%'
     },
   });
-

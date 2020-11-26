@@ -56,21 +56,21 @@ const App = ( props ) => {
         { 
           x : 75,
           y : 550,
-          uri : 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4617/leaf-clipart-md.png',
+          require : '../../imagenes/Hojas.png',
           result : valores[0],
         },
     
         { 
           x : 0,
           y : 600,
-          uri : 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4617/leaf-clipart-md.png',
+          require : '../../imagenes/Hojas.png',
           result : valores[1],
         },
     
         { 
           x : 200,
           y : 600,
-          uri : 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4617/leaf-clipart-md.png',
+          require : '../../imagenes/Hojas.png',
           result : valores[2],
         }
     
@@ -179,22 +179,22 @@ const App = ( props ) => {
     let temp = [
       { 
         x : 75,
-        y : 550,
-        uri : 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4617/leaf-clipart-md.png',
+        y : 1200,
+        require : '../../imagenes/Hojas.png',
         result : valores[0],
       },
   
       { 
         x : 0,
-        y : 600,
-        uri : 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4617/leaf-clipart-md.png',
+        y : 900,
+        require : '../../imagenes/Hojas.png',
         result : valores[1],
       },
   
       { 
         x : 200,
         y : 600,
-        uri : 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/4617/leaf-clipart-md.png',
+        require : '../../imagenes/Hojas.png',
         result : valores[2],
       }
   
@@ -238,7 +238,7 @@ const App = ( props ) => {
         </Text>
         
       </View>
-      <ImageBackground source={{uri : 'https://www.3dmodels-textures.com/image/cache/assets/3DModels-Textures/2D%20Cartoon%20Trees703/image/tree%209-600x450.jpg'}} style={styles.image}>
+      <ImageBackground source={require('../../imagenes/Arbol.jpg')} style={styles.image}>
 
       {
         operations.map((item, key) => {
